@@ -1,0 +1,386 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap');
+
+/* Base styles */
+body, .App {
+  font-family: 'Inter', 'Segoe UI', 'Helvetica Neue', 'Arial', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  margin: 0;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.App {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background-color: #444654;
+  color: #fff;
+}
+
+/* Header */
+.App-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #444654;
+  color: #fff;
+  padding: 1rem 2rem;
+  border-bottom: 1px solid #6e7681;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+}
+
+.App-header-title {
+  margin: 0;
+  font-size: 1.5rem;
+  font-weight: 500;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.header-buttons {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+}
+
+/* Header buttons */
+.theme-toggle,
+.new-convo-btn {
+  background-color: transparent;
+  border: 1px solid #888;
+  border-radius: 8px;
+  padding: 6px 12px;
+  font-size: 1.2rem;
+  color: inherit;
+  cursor: pointer;
+  transition: background 0.3s ease, border-color 0.3s ease;
+}
+
+.theme-toggle:hover,
+.new-convo-btn:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+  border-color: #aaa;
+}
+
+/* Main content area */
+.App-main {
+  height: calc(100vh - 4rem - 110px);
+  margin-top: 4rem;
+  padding: 1rem 0;
+  width: 100%;
+  overflow-y: auto;
+  box-sizing: border-box;
+  background: transparent;
+  color: #E1E8EB;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  scrollbar-width: thin;
+  scrollbar-color: rgba(255,255,255,0.3) transparent;
+}
+
+.App-main::-webkit-scrollbar {
+  width: 6px;
+}
+
+.App-main::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.App-main::-webkit-scrollbar-thumb {
+  background-color: rgba(255, 255, 255, 0.3);
+  border-radius: 3px;
+  border: none;
+}
+
+.App-main::-webkit-scrollbar-thumb:hover {
+  background-color: rgba(255, 255, 255, 0.6);
+}
+
+/* Chat container */
+.chat-container {
+  max-width: 700px;
+  width: 90%;
+  margin: 0 auto;
+  padding: 0 1rem;
+  word-wrap: break-word;
+  word-break: break-word;
+  line-height: 1.5;
+}
+
+/* Welcome message */
+.welcome-message {
+  color: #ccc;
+  font-size: 1.4rem;
+  font-style: italic;
+  text-align: center;
+  margin-top: 3rem;
+  user-select: none;
+  animation: fadeInOut 4s ease forwards;
+}
+
+@keyframes fadeInOut {
+  0% { opacity: 0; }
+  10% { opacity: 1; }
+  90% { opacity: 1; }
+  100% { opacity: 0; }
+}
+
+/* Input container */
+.App-input-container {
+  position: fixed;
+  bottom: 30px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 90%;
+  max-width: 600px;
+  z-index: 1000;
+}
+
+.App-input-container input.form-control {
+  height: 80px;
+  font-size: 1.8rem;
+  background-color: #888;
+  color: #ccc;
+  border: 1.5px solid #666;
+  border-radius: 6px;
+  padding-right: 80px;
+  width: 100%;
+  outline: none;
+  transition: border-color 0.3s ease;
+}
+
+.App-input-container input.form-control:focus {
+  border-color: #4caf50;
+  box-shadow: none;
+}
+
+input::placeholder {
+  color: #ccc;
+}
+
+input.form-control::placeholder {
+  color: #fff;
+  opacity: 1;
+}
+
+/* Footer text */
+.footer-hint {
+  font-size: 0.8rem;
+  text-align: center;
+  margin-top: 4px;
+  color: #aaa;
+}
+
+/* Loading animation */
+.loading-text {
+  font-size: 1.5rem;
+  font-weight: 500;
+  color: #ccc;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100px;
+}
+
+.dot {
+  font-size: 2rem;
+  animation: blink 1.4s infinite;
+  opacity: 0.2;
+  transition: opacity 0.2s ease-in-out;
+}
+
+.dot.one { animation-delay: 0s; }
+.dot.two { animation-delay: 0.2s; }
+.dot.three { animation-delay: 0.4s; }
+
+@keyframes blink {
+  0%, 80%, 100% { opacity: 0.2; }
+  40% { opacity: 1; }
+}
+
+/* Theme styles */
+.App.dark {
+  background-color: #444654;
+  color: #fff;
+}
+
+.App.light {
+  background-color: #f5f5f5;
+  color: #222;
+}
+
+.App.light .App-header {
+  background-color: #fff;
+  color: #222;
+  border-bottom: 1px solid #ccc;
+}
+
+.App.light .App-main {
+  color: #333;
+}
+
+.App.light input.form-control {
+  background-color: #fff;
+  color: #222;
+  border-color: #ccc;
+}
+
+.App.dark input.form-control {
+  background-color: #888;
+  color: #ccc;
+  border-color: #666;
+}
+
+.theme-toggle,
+.new-convo-btn {
+  background-color: transparent;
+  border: none;
+  border-radius: 50%; /* make the button circular */
+  padding: 10px; /* ensure padding makes the circle */
+  font-size: 1.2rem;
+  color: inherit;
+  cursor: pointer;
+  transition: background 0.3s ease;
+  width: 40px;     /* set equal width and height */
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+
+.header-buttons {
+  display: flex;
+  gap: 0; /* removed space between buttons */
+  align-items: center;
+}
+
+
+/* Response card */
+.candidate-card {
+  background-color: rgba(255, 255, 255, 0.05);
+  padding: 1rem;
+  margin-top: 1rem;
+  border-radius: 10px;
+  line-height: 1.6;
+  position: relative;
+}
+
+/* Action buttons */
+.response-actions {
+  display: flex;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.action-btn {
+  background: none;
+  border: none;
+  color: #ccc;
+  cursor: pointer;
+  padding: 4px;
+  transition: color 0.2s;
+  display: flex;
+  align-items: center;
+}
+
+.action-btn:hover {
+  color: #fff;
+}
+
+.action-btn.active {
+  color: #4caf50;
+}
+
+.markdown-paragraph {
+  margin: 0.5rem 0;
+}
+
+.markdown-list-item {
+  margin-left: 1.5rem;
+}
+
+.markdown-strong {
+  font-weight: 600;
+}
+
+.markdown-em {
+  font-style: italic;
+}
+
+.markdown-link {
+  color: #4fa3ff;
+  text-decoration: underline;
+}
+.chat-respons-container {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.candidate-card {
+  background-color: transparent;
+  padding: 1rem;
+  margin-top: 1rem;
+  border-radius: 10px;
+  line-height: 1.6;
+  position: relative;
+}
+
+
+
+.response-actions {
+  display: flex;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.action-btn {
+  background: transparent;
+  border: none;
+  color: #ccc;
+  cursor: pointer;
+  padding: 6px;
+  border-radius: 6px;
+  transition: background 0.2s;
+}
+
+.action-btn {
+  background-color: transparent;
+  border: none;
+  padding: 6px;
+  cursor: pointer;
+  color: #ccc;
+  transition: color 0.3s, transform 0.2s;
+}
+
+.action-btn:hover {
+  color: #fff;
+  transform: scale(1.1);
+}
+
+.action-btn.active {
+  color: #4caf50;
+}
+
+
+.copied-hint {
+  font-size: 0.9rem;
+  color: #4caf50;
+  margin-top: 8px;
+  animation: fadeInOut 2s ease-in-out;
+}
+
+@keyframes fadeInOut {
+  0% { opacity: 0; }
+  10% { opacity: 1; }
+  90% { opacity: 1; }
+  100% { opacity: 0; }
+}
+

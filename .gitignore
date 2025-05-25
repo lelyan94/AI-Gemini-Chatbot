@@ -1,0 +1,12 @@
+/target/
+/out/
+/bin/
+/.vscode/
+/.idea/
+/*.iml
+*.class
+*.log
+*.jar
+*.war
+.DS_Store
+.env

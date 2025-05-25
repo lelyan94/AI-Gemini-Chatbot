@@ -1,0 +1,5 @@
+com\ai\gemini_chat\GeminiChatApplication.class
+com\ai\gemini_chat\SecurityConfig.class
+com\ai\gemini_chat\AIcontroller.class
+com\ai\gemini_chat\QnAService.class
+com\ai\gemini_chat\WebConfig.class
