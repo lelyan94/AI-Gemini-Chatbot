@@ -44,34 +44,7 @@ Gemini AI Chatbot provides an easy and natural way to interact with AI using eit
 ---
 
 ## Project Structure
-
-AI-GEMINI-CHATBOT/
-├── gemini-chat/
-│   ├── .idea/                     # IntelliJ project settings
-│   ├── .mvn/                      # Maven wrapper files
-│   ├── src/
-│   │   └── main/
-│   │       ├── java/com/ai/gemini_chat/
-│   │       │   ├── AIcontroller.java        # Handles chat REST endpoints
-│   │       │   ├── GeminiChatApplication.java # Spring Boot main class
-│   │       │   ├── QnAService.java          # Service logic for question answering
-│   │       │   ├── SecurityConfig.java      # Spring Security config
-│   │       │   └── WebConfig.java           # CORS and MVC config
-│   │       └── resources/
-│   │           └── application.properties   # Spring Boot configuration
-│
-├── gemini-chat-frontend/
-│   ├── public/                    # Static assets
-│   ├── src/
-│   │   ├── assets/                # Images, logos, etc.
-│   │   ├── components/            # React components (ChatBox, ChatInput, etc.)
-│   │   ├── services/              # Axios-based API calls
-│   │   ├── App.jsx                # Main React component
-│   │   ├── main.jsx               # React DOM entry point
-│   │   ├── App.css                # App-wide styles
-│   │   └── index.css              # Global CSS
-│
-└── .gitignore                     # Git ignored files list
+<pre> ``` AI-GEMINI-CHATBOT/ ├── gemini-chat/ │ ├── .idea/ # IntelliJ project settings │ ├── .mvn/ # Maven wrapper files │ ├── src/ │ │ └── main/ │ │ ├── java/com/ai/gemini_chat/ │ │ │ ├── AIcontroller.java # Handles chat REST endpoints │ │ │ ├── GeminiChatApplication.java # Spring Boot main class │ │ │ ├── QnAService.java # Service logic for question answering │ │ │ ├── SecurityConfig.java # Spring Security config │ │ │ └── WebConfig.java # CORS and MVC config │ │ └── resources/ │ │ └── application.properties # Spring Boot configuration ├── gemini-chat-frontend/ │ ├── public/ # Static assets │ ├── src/ │ │ ├── assets/ # Images, logos, etc. │ │ ├── components/ # React components (ChatBox, ChatInput) │ │ ├── services/ # Axios-based API calls │ │ ├── App.jsx # Main React component │ │ ├── main.jsx # React DOM entry point │ │ ├── App.css # App-wide styles │ │ └── index.css # Global CSS └── .gitignore # Git ignored files list ``` </pre>
 
 ---
 
