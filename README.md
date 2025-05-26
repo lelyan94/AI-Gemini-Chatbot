@@ -39,6 +39,9 @@ AI-GEMINI-CHATBOT/
 │ │ │ └── WebConfig.java # CORS and MVC config
 │ │ └── resources/
 │ │ └── application.properties # App configuration
+
+---
+
 ├── gemini-chat-frontend/
 │ ├── public/ # Static assets (HTML, icons)
 │ ├── src/
