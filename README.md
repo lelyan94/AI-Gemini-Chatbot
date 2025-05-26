@@ -25,34 +25,29 @@
 
 ## 📁 Project Structure
 
-AI-GEMINI-CHATBOT/
-├── gemini-chat/
-│ ├── .idea/ # IntelliJ project settings
-│ ├── .mvn/ # Maven wrapper files
-│ ├── src/
-│ │ └── main/
-│ │ ├── java/com/ai/gemini_chat/
-│ │ │ ├── AIcontroller.java # Handles chat REST endpoints
-│ │ │ ├── GeminiChatApplication.java # Spring Boot main class
-│ │ │ ├── QnAService.java # Business logic for Q&A
-│ │ │ ├── SecurityConfig.java # Spring Security config
-│ │ │ └── WebConfig.java # CORS and MVC config
-│ │ └── resources/
-│ │ └── application.properties # App configuration
-
----
-
-├── gemini-chat-frontend/
-│ ├── public/ # Static assets (HTML, icons)
-│ ├── src/
-│ │ ├── assets/ # Images, logos, etc.
-│ │ ├── components/ # React components (ChatBox, ChatInput)
-│ │ ├── services/ # Axios-based API calls
-│ │ ├── App.jsx # Main React component
-│ │ ├── main.jsx # React DOM entry point
-│ │ ├── App.css # Component-level styles
-│ │ └── index.css # Global CSS
-└── .gitignore # Git ignored files list
+gemini-chat/
+├── gemini-chat-frontend/         # React + Bootstrap frontend
+│   ├── public/                   # Static HTML, icons, etc.
+│   ├── src/
+│   │   ├── assets/               # Images, logos
+│   │   ├── components/           # UI components like ChatInput, ChatBox
+│   │   ├── services/             # Axios HTTP client and API calls
+│   │   ├── App.jsx               # Main React app entry point
+│   │   ├── main.jsx              # React DOM entry point
+│   │   ├── App.css               # Component-wide styles
+│   │   └── index.css             # Global CSS
+├── gemini-chat-backend/          # Spring Boot backend REST API
+│   ├── src/
+│   │   └── main/
+│   │       ├── java/com/ai/gemini_chat/
+│   │       │   ├── AIcontroller.java          # Handles chat REST endpoints
+│   │       │   ├── GeminiChatApplication.java # Spring Boot main class
+│   │       │   ├── QnAService.java            # Business logic and Q&A
+│   │       │   ├── SecurityConfig.java        # Spring Security configuration
+│   │       │   └── WebConfig.java             # CORS and MVC config
+│   │       └── resources/
+│   │           └── application.properties     # Spring Boot config file
+└── .gitignore                         # Git ignored files list
 
 
 
