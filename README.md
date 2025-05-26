@@ -42,14 +42,17 @@ AI-GEMINI-CHATBOT/
 ├── gemini-chat-frontend/
 │ ├── public/ # Static assets (HTML, icons)
 │ ├── src/
-│ │ ├── assets/            # Images, logos, etc.
-│ │ ├── components/        # React components (ChatBox, ChatInput)
-│ │ ├── services/          # Axios-based API calls
-│ │ ├── App.jsx            # Main React component
-│ │ ├── main.jsx           # React DOM entry point
-│ │ ├── App.css            # Component-level styles
-│ │ └── index.css          # Global CSS
-└── .gitignore             # Git ignored files list
+│ │ ├── assets/ # Images, logos, etc.
+│ │ ├── components/ # React components (ChatBox, ChatInput)
+│ │ ├── services/ # Axios-based API calls
+│ │ ├── App.jsx # Main React component
+│ │ ├── main.jsx # React DOM entry point
+│ │ ├── App.css # Component-level styles
+│ │ └── index.css # Global CSS
+└── .gitignore # Git ignored files list
+
+
+
 
 
 ---
