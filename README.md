@@ -27,8 +27,32 @@
 ---
 
 ## Project Overview
-
-Gemini AI Chatbot provides an easy and natural way to interact with AI using either typing or voice. It uses speech-to-text technology so users can ask questions hands-free. The interface is clean, with both **light and dark modes** to suit user preferences. The backend processes requests and communicates with Google Gemini API to fetch real-time, context-aware responses.
+---
+AI-GEMINI-CHATBOT/
+├── gemini-chat/
+│   ├── .idea/                          # IntelliJ project settings
+│   ├── .mvn/                           # Maven wrapper files
+│   ├── src/
+│   │   └── main/
+│   │       ├── java/com/ai/gemini_chat/
+│   │       │   ├── AIcontroller.java             # Handles chat REST endpoints
+│   │       │   ├── GeminiChatApplication.java    # Spring Boot main class
+│   │       │   ├── QnAService.java               # Service logic for question answering
+│   │       │   ├── SecurityConfig.java           # Spring Security configuration
+│   │       │   └── WebConfig.java                # CORS and MVC configuration
+│   │       └── resources/
+│   │           └── application.properties        # Spring Boot configuration file
+├── gemini-chat-frontend/
+│   ├── public/                        # Static assets (HTML, icons)
+│   ├── src/
+│   │   ├── assets/                    # Images, logos, etc.
+│   │   ├── components/                # React components (ChatBox, ChatInput)
+│   │   ├── services/                  # Axios-based API calls
+│   │   ├── App.jsx                    # Main React component
+│   │   ├── main.jsx                   # React DOM entry point
+│   │   ├── App.css                    # App styling
+│   │   └── index.css                  # Global CSS
+└── .gitignore                        # Git ignored files list
 
 ---
 
