@@ -37,6 +37,7 @@ gemini-chat/
 │   │   ├── App.css               # Component-wide styles
 │   │   └── index.css             # Global CSS
 
+---
 
 ├── gemini-chat-backend/          # Spring Boot backend REST API
 │   ├── src/
